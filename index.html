@@ -1774,7 +1774,7 @@ body.pc-open{overflow:hidden}body.pc-open #bar{display:none!important}
         <div><i style="background:#5BB6F2;border-radius:50%"></i><dt>Problem</dt><dd>“I can find a list. I just don't know which list applies to me yet.”</dd></div>
         <div><i style="background:#F23ED6;border-radius:0 100% 0 0"></i><dt>Outcome</dt><dd>Six newcomers could follow it as a map and valued that it never asked for a login. What they missed drove two rebuilds.</dd></div>
       </dl>
-      <a class="go" data-case="landing" href="#landing">View case study <span>→</span></a>
+      <div class="gos"><a class="go" data-case="landing" href="#landing">View case study <span>→</span></a><a class="go live" href="https://landing-first-90-days.netlify.app/" target="_blank" rel="noopener">Try the real prototype <svg width="14" height="14" viewBox="0 0 14 14" aria-hidden="true"><path d="M3 11L11 3M5 3h6v6" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg><span class="sr"> (opens in a new tab)</span></a></div>
     </div>
   </article>
 
@@ -1788,7 +1788,7 @@ body.pc-open{overflow:hidden}body.pc-open #bar{display:none!important}
         <div><i style="background:#5BB6F2;border-radius:50%"></i><dt>Problem</dt><dd>Maintenance gaps hide across 311 requests, sidewalk and road-condition data.</dd></div>
         <div><i style="background:#F23ED6;border-radius:0 100% 0 0"></i><dt>Outcome</dt><dd>Narrows 69,461 complaints to 456 checkable leads, each ending in questions for the county. Not yet tested with council staff.</dd></div>
       </dl>
-      <a class="go" data-case="civic" href="#civic">View case study <span>→</span></a>
+      <div class="gos"><a class="go" data-case="civic" href="#civic">View case study <span>→</span></a><a class="go live" href="https://civic-signal-pg.netlify.app/" target="_blank" rel="noopener">Try the real prototype <svg width="14" height="14" viewBox="0 0 14 14" aria-hidden="true"><path d="M3 11L11 3M5 3h6v6" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg><span class="sr"> (opens in a new tab)</span></a></div>
     </div>
   </article>
 
@@ -1802,7 +1802,7 @@ body.pc-open{overflow:hidden}body.pc-open #bar{display:none!important}
         <div><i style="background:#5BB6F2;border-radius:50%"></i><dt>Problem</dt><dd>When work changes hands, the decisions and open questions get lost.</dd></div>
         <div><i style="background:#F23ED6;border-radius:0 100% 0 0"></i><dt>Outcome</dt><dd>Expert review found seven issues, all fixed, and the prototype is live. User sessions come next to measure time saved.</dd></div>
       </dl>
-      <a class="go" data-case="relay" href="#relay">View case study <span>→</span></a>
+      <div class="gos"><a class="go" data-case="relay" href="#relay">View case study <span>→</span></a><a class="go live" href="https://relaycontinuity.netlify.app/" target="_blank" rel="noopener">Try the real prototype <svg width="14" height="14" viewBox="0 0 14 14" aria-hidden="true"><path d="M3 11L11 3M5 3h6v6" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg><span class="sr"> (opens in a new tab)</span></a></div>
     </div>
   </article>
 </section>
@@ -5456,6 +5456,15 @@ body.case-open .csprog{opacity:1}
 /* toolbox: intro sentence removed from view (kept for screen readers as the section's name) */
 .tools #tlh{position:absolute!important;width:1px!important;height:1px!important;overflow:hidden!important;clip:rect(0 0 0 0)!important;white-space:nowrap!important;margin:0!important;padding:0!important}
 .tools .wintro{justify-content:flex-end!important;margin-top:0!important}
+
+/* work cards: the prototype link lives beside "View case study", not on the thumbnail */
+.cover .real .tag{display:none!important}
+.gos{display:flex;flex-wrap:wrap;gap:10px;align-self:flex-start;align-items:center}
+.gos .go{align-self:auto}
+.go.live{background:transparent;color:var(--ink);box-shadow:inset 0 0 0 2px var(--ink)}
+.go.live svg{flex:none;transition:transform .3s}
+.go.live:hover{background:var(--ink);color:#fff;gap:10px}
+.go.live:hover svg{transform:translate(2px,-2px)}
 </style><script>/* ===== readability + hierarchy pass ===== */
 (()=>{
 const PH=()=>matchMedia('(max-width:640px)').matches;
